@@ -1,4 +1,4 @@
-# tensorflow
+# Tensorflow
 
 tensorflow Js is a powerful library that make in javascript that can make a model machine learning easy to use and easy to make model
 <br>
@@ -45,3 +45,20 @@ console.log(`f'(a):`);
 da(a).print();
 ```
 
+- Creating a one-dimensional tensor 'a'.
+
+- 'tf.grad' is used to create a function ('da') that calculates the gradient of a custom operation against 'a'.
+
+- 'da(a).print()' displays the gradient of a after it has been applied to 'a' custom operation.
+
+## Calculate Value Custom Operation
+
+```javaScript
+console.log(`f(a):`);
+customOp(a).print();
+```
+
+- Menghitung dan menampilkan hasil operasi kustom 'customOp(a)'.
+
+## Summary
+This code demonstrates the creation and use of a custom mathematical operation in TensorFlow.js, where it calculates the cubed value of the input, and also defines how the derivative (gradient) of the operation is calculated. Then, the code applies these operations to a tensor and displays the results and gradients of the operations. This is an example of a more general concept in machine learning and neural network model development, where gradient calculation is key in the training process.
