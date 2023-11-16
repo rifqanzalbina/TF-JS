@@ -1,6 +1,6 @@
 # Tensorflow
 
-Tensorflow js is a powerful librarrry machine learning with easy to learn and easy to know what is machine learning, so in this code example , i make that 'system' can calculate 2x - 1 by himself without inpout from user or human, interesting right? so let's me explain the code
+Tensorflow js is a powerful librarrry machine learning with easy to learn and easy to know what is machine learning, so in this code example , i make that 'system' can calculate 2x - 1 by himself without input from user or human, interesting right? so let's me explain the code
 
 ## The Code
 
