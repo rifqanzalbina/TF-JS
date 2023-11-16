@@ -1,3 +1,3 @@
 # TF-JS
-Tensorflow in JavaScript
+Tensorflow using JavaScript
 
