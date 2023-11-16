@@ -8,7 +8,7 @@ and this is explanation of the code which is simply you can try it too :D
 
 ## Import Tensorflow.js
 
-```bash
+```javaScript
 const tf = require('@tensorflow/tfjs');
 ```
 
@@ -16,7 +16,7 @@ const tf = require('@tensorflow/tfjs');
 
 ## Make Operation Quantum
 
-```bash
+```javaScript
 const customOp = tf.customGrad((a, save) => {
   save([a]);
 
@@ -26,3 +26,22 @@ const customOp = tf.customGrad((a, save) => {
   };
 });
 ```
+
+- 'tf.customGrad' is used to define custom operations and the gradients (children) of those operations.
+
+- This function receives input 'a' and uses 'save' to save it.
+
+- 'value' is the output of this custom operation. In this case, 'a.pow(tf.scalar(3, 'int32'))' computes the value of 'a' cubed.
+
+- 'gradFunc' defines how the gradient of this operation is calculated. This takes the outer derivative ('dy') and the saved value ('saved'), then multiplies them. In this case, the gradient is calculated as 'dy' times the absolute value of 'a' (saved[0].abs()).
+
+## Make a Tensor and Calculate Gradients
+
+```javaScript
+const a = tf.tensor1d([0, -1, 2, -2, 8]);
+const da = tf.grad(a => customOp(a));
+
+console.log(`f'(a):`);
+da(a).print();
+```
+
